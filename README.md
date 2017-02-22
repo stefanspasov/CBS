@@ -25,7 +25,8 @@ The main flow is: The customer makes a reservation and gets a reservation id whi
                                 "ReturnDate": "2017-02-21 23:10:58",
                                 "ReturnKilometers": 4000
                               }
-                              
+   
+There is a small WPF application included in the solution. Multiple projects need to be selected for start up. The application uses RestSharp client to connect to the rest services. 
                              
 # Configuration:
 The repositories are injected so they can be replaced by any module that implements IExternalReservationRepository and IExternalSettingRepository.   
