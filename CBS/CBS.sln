@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBSTests", "CBSTests\CBSTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBSSqlRepositories", "CBSSqlRepositories\CBSSqlRepositories.csproj", "{B5AAD778-346F-4121-8DBD-3B8ABDA1D45C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSampleUI", "WpfSampleUI\WpfSampleUI.csproj", "{2E804794-BF68-46D3-A2CC-44D18B6C0B8E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B5AAD778-346F-4121-8DBD-3B8ABDA1D45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5AAD778-346F-4121-8DBD-3B8ABDA1D45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5AAD778-346F-4121-8DBD-3B8ABDA1D45C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E804794-BF68-46D3-A2CC-44D18B6C0B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E804794-BF68-46D3-A2CC-44D18B6C0B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E804794-BF68-46D3-A2CC-44D18B6C0B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E804794-BF68-46D3-A2CC-44D18B6C0B8E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
