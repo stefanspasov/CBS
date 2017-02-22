@@ -29,10 +29,13 @@ The main flow is: The customer makes a reservation and gets a reservation id whi
 # Configuration:
 The repositories are injected so they can be replaced by any module that implements IExternalReservationRepository and IExternalSettingRepository.
 Steps to add a new data layer:
-1. Create an assembly with classes that implement the IExternalReservationRepository and IExternalSettingRepository
-2. In CBS App.config in the <unity> section add the new assembly name.
-3. Currently the new DLLs should be in the bin/debug of their own project in the CBS solution directory. There is a TODO in UnityContainerFactory for that.  
-4. There is already one Entity Framework implementation of the data layer in CBSSqlRepositories.
+1. Create an assembly with classes that implement the IExternalReservationRepository and IExternalSettingRepository.   
+
+2. In CBS App.config in the <unity> section add the new assembly name.    
+
+3. Currently the new DLLs should be in the bin/debug of their own project in the CBS solution directory. There is a TODO in UnityContainerFactory for that.     
+
+4. There is already one Entity Framework implementation of the data layer in CBSSqlRepositories.   
 
 # Notes:
 The service is self-hosted with MS Owin implementation so no IIS is needed. The port can be changed in the Program.cs file.
