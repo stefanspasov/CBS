@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CBS/CBS/bin/Debug
+/CBS/CBS/obj/Debug
+/CBS/CBSSqlRepositories/bin/Debug
+/CBS/CBSSqlRepositories/obj/Debug
+/CBS/CBSTests/bin/Debug
+/CBS/CBSTests/obj/Debug
+/CBS/packages
