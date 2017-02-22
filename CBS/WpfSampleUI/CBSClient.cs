@@ -1,5 +1,8 @@
 ﻿namespace WpfSampleUI
 {
+    using System;
+    using System.Net;
+
     using Newtonsoft.Json;
 
     using RestSharp;
@@ -31,7 +34,12 @@
             var client = this.GetClient();
             var response = client.Execute(request);
             var deserializer = new JsonDeserializer();
-            return deserializer.Deserialize<T>(response);
+            if (response.StatusCode == HttpStatusCode.OK || response.StatusCode == HttpStatusCode.Created)
+            {
+                return deserializer.Deserialize<T>(response);
+            }
+
+            throw new Exception(response.Content);
         }
 
         private RestClient GetClient()

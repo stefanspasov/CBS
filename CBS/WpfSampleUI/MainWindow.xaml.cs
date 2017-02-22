@@ -20,28 +20,44 @@ namespace WpfSampleUI
 
         private void btnMakeReservation_Click(object sender, RoutedEventArgs e)
         {
-            var newReservation = new MakeReservationDto
-                                     {
-                                         BookingDate = DateTime.Now,
-                                         BookingKilometers = int.Parse(this.tbInitialKilometers.Text),
-                                         CustomerNumber = this.tbCustomerId.Text,
-                                         VehicleType = int.Parse(this.cbVehicleType.SelectedValue.ToString())
-                                     };
-            this.lblReservationCreatedNotification.Content = $"Reservation with id: {this.cbsClient.MakeReservation(newReservation)} created!"; 
+            try
+            {
+                var newReservation = new MakeReservationDto
+                {
+                    BookingDate = DateTime.Now,
+                    BookingKilometers = int.Parse(this.tbInitialKilometers.Text),
+                    CustomerNumber = this.tbCustomerId.Text,
+                    VehicleType = int.Parse(this.cbVehicleType.SelectedValue.ToString())
+                };
+                this.lblReservationCreatedNotification.Content = $"Reservation with id: {this.cbsClient.MakeReservation(newReservation)} created!";
+            }
+            catch (Exception ex)
+            {
+                this.lblMakeReservationError.Content = $"Error when creating reservation. {ex.Message}";
+            }
+
         }
 
         private void btnUpdateReservation_Click(object sender, RoutedEventArgs e)
         {
-            var reservation = new UpdateReservationDto
-                                  {
-                                      ReservationId = int.Parse(this.tbReservationId.Text),
-                                      ReturnDate = DateTime.Now,
-                                      ReturnKilometers = int.Parse(this.tbReturnKilometers.Text)
-                                  };
-            var response = this.cbsClient.UpdateReservation(reservation);
-            this.lblTotalPrice.Content = "Total price: " + response.TotalPrice;
-            this.lblKilometersTravelled.Content = "Passed kilometers: " + response.KilometersTravelled;
-            this.lblNumberOfDays.Content = "Number of days: " +  response.NumberOfDays;
+
+            try
+            {
+                var reservation = new UpdateReservationDto
+                {
+                    ReservationId = int.Parse(this.tbReservationId.Text),
+                    ReturnDate = DateTime.Now,
+                    ReturnKilometers = int.Parse(this.tbReturnKilometers.Text)
+                };
+                var response = this.cbsClient.UpdateReservation(reservation);
+                this.lblTotalPrice.Content = "Total price: " + response.TotalPrice;
+                this.lblKilometersTravelled.Content = "Passed kilometers: " + response.KilometersTravelled;
+                this.lblNumberOfDays.Content = "Number of days: " + response.NumberOfDays;
+            }
+            catch (Exception ex)
+            {
+                this.lblUpdateError.Content = $"Error when updating. {ex.Message}";
+            }
         }
     }
 
