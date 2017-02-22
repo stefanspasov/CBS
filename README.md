@@ -7,7 +7,7 @@ The main flow is: The customer makes a reservation and gets a reservation id whi
 1. Build CBSSqlRepositories project.
 2. Modify the "CbsConnection" conection string in App.config in CBS project. The database is generated and seeded automatically in the location provided in "AttachDbFileName" property. "Data Source" property should poitn to sql server instance. 
 3. A REST tool can be used to communicate with the service. E.g. Postman for Chrome or Fiddler. 
-4. Example calls (Content-Type should be application/json)
+4. Example calls (Content-Type should be application/json)    
    POST to localhost:8080/vehicle/book with body: (Returns reservation ID that is used in the PATCH)
    
                             {
