@@ -1,7 +1,7 @@
 # CBS
 CBS (Custom Booking System) is implemented as a self-hosted web service.
 It contains two methods: one for maing a reservation and one for finalizing it.
-The main flow is: The customer makes a reservation and gets a reservation id which is then used to update the reservation with return date and passed kilometers.
+The main flow is: The customer makes a reservation and gets a reservation id which is then used to update the reservation with return date and passed kilometers and get the total price. 
 
 # To run:
 1. Build CBSSqlRepositories project.
